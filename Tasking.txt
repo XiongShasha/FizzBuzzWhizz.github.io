@@ -1,0 +1,31 @@
+#1. 将输入的0~100找出对应的正确单词序列，并与0~100数字匹配
+
+    输入：a:Number,
+         b:Number,
+         ...
+         c:Number
+    输出：match：[{
+         num:Number,
+         word:String
+         }]
+
+#2. 判断number是否是3,5,7的倍数,是3的倍数就返回'Fizz',是5的倍数就返回'Buzz',是7的倍数就返回'Whizz'
+    判断number是否是两个特殊数的倍数，是3,5的就返回'FizzBuzz',以此类推（规则3,4）
+    输入：match：[Object]
+    输出：match：[{
+         num:Number,
+         word:String
+         }]
+
+#3. 判断word是否含有'3',如果有就将word变为'Fizz'(规则5）
+
+    输入：match：[Object]
+    输出：match：[{
+                num:Number,
+                word:String
+           }]
+
+#4. 输出100名学生对应的数或单词
+
+    输入：match：[Object]
+    输出：return：String
