@@ -1,31 +1,16 @@
-#1. 将输入的0~100找出对应的正确单词序列，并与0~100数字匹配
+#1. 将输入数字变成字符串stringArray:[String],然后判断规则3,4,5，最后得出经过游戏之后的数字或者字符串
 
-    输入：a:Number,
-         b:Number,
-         ...
-         c:Number
-    输出：match：[{
-         num:Number,
-         word:String
-         }]
+    输入:input:Number
+         stringArray:[String]
+    输出：oneFizzBuzzWhizzNumber:[Number]/[String]
 
-#2. 判断number是否是3,5,7的倍数,是3的倍数就返回'Fizz',是5的倍数就返回'Buzz',是7的倍数就返回'Whizz'
-    判断number是否是两个特殊数的倍数，是3,5的就返回'FizzBuzz',以此类推（规则3,4）
-    输入：match：[Object]
-    输出：match：[{
-         num:Number,
-         word:String
-         }]
+#2. 遍历1~100s所有数字，得出所有数字经过游戏所得到到的数字或者字符串
+    输入：inputs:[Number],
+          oneFizzBuzzWhizzNumber:[Number]/[String]
+    输出：result:[Number/String]
 
-#3. 判断word是否含有'3',如果有就将word变为'Fizz'(规则5）
-
-    输入：match：[Object]
-    输出：match：[{
-                num:Number,
-                word:String
-           }]
-
-#4. 输出100名学生对应的数或单词
-
-    输入：match：[Object]
-    输出：return：String
+#3. 打印出结果
+    
+    输入：inputs:[Number],
+          result:[Number/String]
+    输出：return:String
