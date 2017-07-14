@@ -28,13 +28,13 @@ function fizzBuzzWhizz(input) {
     }
     return oneFizzBuzzWhizzNumber;
 }
-
+//#2. 遍历1~100s所有数字，得出所有数字经过游戏所得到到的数字或者字符串//15min
 function processInputs(inputs) {
     let result = [];
     result = inputs.map(fizzBuzzWhizz);
     return result;
 }
-
+//#3. 打印出结果//15min
 function printFizzBuzzWhizz(inputs) {
     let processedInputs=processInputs(inputs);
     console.log(processedInputs);

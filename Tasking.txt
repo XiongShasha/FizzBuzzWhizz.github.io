@@ -9,7 +9,7 @@
           oneFizzBuzzWhizzNumber:[Number]/[String]
     输出：result:[Number/String]
 
-#3. 打印出结果//min
+#3. 打印出结果//15min
     
     输入：inputs:[Number],
           result:[Number/String]
