@@ -43,38 +43,25 @@ function printFizzBuzzWhizz(inputs) {
 function NumberTest(number) {
     let stringArray = number.toString().split('');
     let oneFizzBuzzWhizzNumber;
-    if (stringArray.indexOf('3') != -1)
+    if(stringArray.indexOf('3')!=-1)
         oneFizzBuzzWhizzNumber = "fizz";
-    else 
-    {
-        if (number % 3 == 0) 
-        {
-            if (number % 5 == 0) 
-            {
-                if(number%7==0)
-                    oneFizzBuzzWhizzNumber = "fizzbuzzwhizz";
-                else
-                    oneFizzBuzzWhizzNumber = "fizzbuzz";
-            }
-            else 
-            {
-                if(number%7==0)
-                    oneFizzBuzzWhizzNumber = "fizzwhizz";
-                else
-                    oneFizzBuzzWhizzNumber = "fizz";
-            }
-        }
-        else if (number % 5 == 0) 
-        {
-            if(number%7==0)
-                oneFizzBuzzWhizzNumber = "buzzwhizz";
-            else
-                oneFizzBuzzWhizzNumber = "buzz";
-        }
-        else if(number% 7 == 0)
-            oneFizzBuzzWhizzNumber = "whizz";
-        else
-            oneFizzBuzzWhizzNumber = number.toString();
+    else if(!oneFizzBuzzWhizzNumber) {
+        if (number % 3 != 0&&number%5!=0&&number%7!=0)
+             oneFizzBuzzWhizzNumber = number.toString();
+        else if (number % 3 == 0&&number%5!=0&&number%7!=0)
+             oneFizzBuzzWhizzNumber = 'fizz';
+        else if (number % 3 != 0&&number%5==0&&number%7!=0)
+             oneFizzBuzzWhizzNumber = 'buzz';
+        else if (number % 3 != 0&&number%5!=0&&number%7==0)
+             oneFizzBuzzWhizzNumber = 'whizz';
+        else if (number % 3 == 0&&number%5==0&&number%7!=0)
+             oneFizzBuzzWhizzNumber = 'fizzbuzz';
+        else if (number % 3 == 0&&number%5!=0&&number%7==0)
+             oneFizzBuzzWhizzNumber = 'fizzwhizz';
+        else if (number % 3 != 0&&number%5==0&&number%7==0)
+             oneFizzBuzzWhizzNumber = 'buzzwhizz';
+        else if (number % 3 == 0&&number%5==0&&number%7==0)
+             oneFizzBuzzWhizzNumber = 'fizzbuzzwhizz';
     }
     return oneFizzBuzzWhizzNumber;
 }
