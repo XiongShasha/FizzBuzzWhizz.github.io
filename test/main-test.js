@@ -2,7 +2,8 @@
 
 describe('pos', () => {
 
-  it('calculateFizzBuzzWhizz', () => {
+  it('FizzBuzzWhizzGame', () => {
+    
     const inputs = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,
         16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,
         31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,
@@ -10,10 +11,10 @@ describe('pos', () => {
         61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,
         76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,
         91,92,93,94,95,96,97,98,99,100];
+      
+    spyOn(console, 'log');
 
-      spyOn(console, 'log');
-
-      printFizzBuzzWhizz(inputs);
+    printFizzBuzzWhizz(inputs);
 
     const expectText = [ 1, 2, 'fizz', 4, 'buzz', 'fizz', 'whizz', 8, 'fizz', 'buzz',
                          11, 'fizz', 'fizz', 'whizz', 'fizzbuzz', 16, 17, 'fizz', 19, 'buzz',
@@ -25,7 +26,39 @@ describe('pos', () => {
                          'buzzwhizz', 71, 'fizz', 'fizz', 74, 'fizzbuzz', 76, 'whizz', 'fizz', 79, 'buzz',
                          'fizz', 82, 'fizz', 'fizzwhizz', 'buzz', 86, 'fizz', 88, 89, 'fizzbuzz',
                          'whizz', 92, 'fizz', 94, 'buzz', 'fizz', 97, 'whizz', 'fizz', 'buzz' ];
-
+  
     expect(console.log).toHaveBeenCalledWith(expectText);
   });
+  it('fizz', () => {        
+        let number = 9;
+        let numbertest = NumberTest(number);
+        expect(numbertest).toEqual("fizz");    });
+  it('buzz', () => {        
+        let number = 25;
+        let numbertest = NumberTest(number);
+        expect(numbertest).toEqual("buzz");    });
+  it('whizz', () => {        
+        let number = 49;
+        let numbertest = NumberTest(number);
+        expect(numbertest).toEqual("whizz");    });
+  it('fizzbuzz', () => {        
+        let number = 15;
+        let numbertest = NumberTest(number);
+        expect(numbertest).toEqual("fizzbuzz");    });
+  it('fizzwhizz', () => {        
+        let number = 21;
+        let numbertest = NumberTest(number);
+        expect(numbertest).toEqual("fizzwhizz");    });
+  it('buzzwhizz', () => {        
+        let number = 70;
+        let numbertest = NumberTest(number);
+        expect(numbertest).toEqual("buzzwhizz");    });
+  it('fizzbuzzwhizz', () => {        
+        let number = 105;
+        let numbertest = NumberTest(number);
+        expect(numbertest).toEqual("fizzbuzzwhizz");    });
+  it('commonNumber', () => {        
+        let number = 8;
+        let numbertest= NumberTest(number);
+        expect(numbertest).toEqual("8");    });
 });

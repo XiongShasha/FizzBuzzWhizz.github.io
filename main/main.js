@@ -2,12 +2,12 @@
  * Created by xiongshasha on 17-7-14.
  */
 "use strict";
-
+//#1.将输入数字变成字符串stringArray:[String],然后判断规则3,4,5，最后得出经过游戏之后的数字或者字符串//15min
 function fizzBuzzWhizz(input) {
     let stringArray = input.toString().split('');
     let oneFizzBuzzWhizzNumber;
     if(stringArray.indexOf('3')!=-1)
-        oneFizzBuzzWhizzNumber = "fizz";//在数组中搜索字符"3"
+        oneFizzBuzzWhizzNumber = "fizz";
     else if(!oneFizzBuzzWhizzNumber) {
         if (input % 3 != 0&&input%5!=0&&input%7!=0)
              oneFizzBuzzWhizzNumber = input;
@@ -38,4 +38,43 @@ function processInputs(inputs) {
 function printFizzBuzzWhizz(inputs) {
     let processedInputs=processInputs(inputs);
     console.log(processedInputs);
+}
+
+function NumberTest(number) {
+    let stringArray = number.toString().split('');
+    let oneFizzBuzzWhizzNumber;
+    if (stringArray.indexOf('3') != -1)
+        oneFizzBuzzWhizzNumber = "fizz";
+    else 
+    {
+        if (number % 3 == 0) 
+        {
+            if (number % 5 == 0) 
+            {
+                if(number%7==0)
+                    oneFizzBuzzWhizzNumber = "fizzbuzzwhizz";
+                else
+                    oneFizzBuzzWhizzNumber = "fizzbuzz";
+            }
+            else 
+            {
+                if(number%7==0)
+                    oneFizzBuzzWhizzNumber = "fizzwhizz";
+                else
+                    oneFizzBuzzWhizzNumber = "fizz";
+            }
+        }
+        else if (number % 5 == 0) 
+        {
+            if(number%7==0)
+                oneFizzBuzzWhizzNumber = "buzzwhizz";
+            else
+                oneFizzBuzzWhizzNumber = "buzz";
+        }
+        else if(number% 7 == 0)
+            oneFizzBuzzWhizzNumber = "whizz";
+        else
+            oneFizzBuzzWhizzNumber = number.toString();
+    }
+    return oneFizzBuzzWhizzNumber;
 }

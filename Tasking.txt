@@ -1,15 +1,15 @@
-#1. 将输入数字变成字符串stringArray:[String],然后判断规则3,4,5，最后得出经过游戏之后的数字或者字符串
+#1. 将输入数字变成字符串stringArray:[String],然后判断规则3,4,5，最后得出经过游戏之后的数字或者字符串//15min
 
     输入:input:Number
          stringArray:[String]
     输出：oneFizzBuzzWhizzNumber:[Number]/[String]
 
-#2. 遍历1~100s所有数字，得出所有数字经过游戏所得到到的数字或者字符串
+#2. 遍历1~100s所有数字，得出所有数字经过游戏所得到到的数字或者字符串//15min
     输入：inputs:[Number],
           oneFizzBuzzWhizzNumber:[Number]/[String]
     输出：result:[Number/String]
 
-#3. 打印出结果
+#3. 打印出结果//min
     
     输入：inputs:[Number],
           result:[Number/String]
